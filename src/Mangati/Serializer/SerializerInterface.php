@@ -3,34 +3,28 @@
 namespace Mangati\Serializer;
 
 /**
- * Defines the interface of the Serializer.
+ * SerializerInterface
  *
- * @author Jordi Boggiano <j.boggiano@seld.be>
+ * @author Rogério Lino <rogeriolino@gmail.com>
  */
 interface SerializerInterface
 {
     
     /**
-     * Serializes data in the appropriate format.
-     *
      * @param mixed  $data    any data
-     * @param string $format  format name
-     * @param array  $context options normalizers/encoders have access to
+     * @param array  $context options
      *
      * @return string
      */
-    public function serialize($data, $format, array $context = []);
+    public function serialize($data, array $context = []);
     
     /**
-     * Deserializes data into the given type.
-     *
      * @param mixed  $data
      * @param string $type
-     * @param string $format
      * @param array  $context
      *
      * @return object
      */
-    public function deserialize($data, $type, $format, array $context = []);
+    public function deserialize($data, $type, array $context = []);
     
 }
