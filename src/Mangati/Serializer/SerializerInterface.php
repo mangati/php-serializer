@@ -20,11 +20,10 @@ interface SerializerInterface
     
     /**
      * @param mixed  $data
-     * @param string $type
      * @param array  $context
      *
      * @return object
      */
-    public function deserialize($data, $type, array $context = []);
+    public function deserialize($data, array $context = []);
     
 }
